@@ -9,9 +9,115 @@
 *{
     margin: 0;
     padding: 0;
+    list-style: none; /*para toda a pagina sem marcador da tag <li>*/
+    text-decoration: none; /*para toda a pagina sem o sublinhado da tag <li>*/
 }
 /*tira as margens de toda pagina*/
 
+
+/*Variaveis globais para fontes*/
+:root{
+
+    --font-primaria: "Baloo Da 2" , serif; 
+    --font-secundaria: "Josefin Slab" , serif;
+    --font-acao: "Muli", serif;
+}
+/*Variaveis globais para fontes*/
+
+
+/*Formatando o estilo do menu Hanburger*/
+.hamburguer{
+
+
+        width: 2rem;
+        height: 2rem;
+        position: fixed;  /*deixa o elemento na posicação fixa*/
+        z-index: 100;  /*Alterar a prodedade do elemento no eixo Z*/
+        right: 2rem; /*Move o elemento para direita*/
+        top: 2rem; /*Move o elemento para baixo*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        cursor: pointer;
+
+
+}   
+/*Formatando o estilo do menu Hanburger*/
+
+/*Animação Formatando o estilo do menu Hanburger*/
+.show-menu .hamburguer{
+
+        right: 16rem;
+}
+/*Animação Formatando o estilo do menu Hanburger*/
+
+
+/*Formatando as linhas do menu Hanburger*/
+.linhas {
+
+  width: 100%;
+  height: 0.1rem;
+  background-color: #fff;
+  box-shadow: 0.1rem 0.1rem 1px #000; /*Sombra do menu de linhas*/
+  transition: transform 1s;
+ 
+}
+/*Formatando as linhas do menu Hanburguer*/
+
+/*fazendo a linha 1 rotacionar para baixo*/
+.show-menu #line1{
+    transform: rotate(47deg) translate(.3rem, .47rem);
+}
+
+/*fazendo a linha 2 do menu hamburguer sumir*/
+.show-menu #line2{
+opacity: 0;
+visibility: hidden;
+}
+/*fazendo a linha 2 do menu hamburguer sumir*/
+
+/*fazendo a linha 3 rotacionar para cima*/
+.show-menu #line3{
+    transform: rotate(-47deg) translate(.1rem, -.47rem);
+}
+
+
+
+/*fazendo a linha 3 rotacionar para cima*/
+.hamburguer span{
+    position: absolute;
+    left: 3rem;
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0575E6;  /* fallback for old browsers */
+    background-color: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background-color: linear-gradient(to left, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #ffffff;
+    font-family: var(--font-acao);
+    border-radius: 5px;
+    opacity: 0;
+} 
+
+/*fazndo a setinha so span*/
+.hamburguer span::before{
+    content: "";
+    position: absolute;
+    border-right: .5rem solid #0575E6;
+    border-top: .5rem solid transparent;
+    border-left: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    left: -1.0rem;
+  
+}
+/*fazndo a setinha so span*/
+
+.show-menu .hamburguer:hover span{
+
+    opacity: 1;
+}
 
 /*cabeçalho da pagina*/
 header {
@@ -66,7 +172,7 @@ header {
 .banner h1{
     color: white;
     font-size: 3rem;
-    font-family: "Baloo Da 2" , serif; /*formata a font baixada do google*/
+    font-family: var(--font-primaria); /*formata a font baixada do google  com variavel de cor global*/
     text-shadow: .3rem .4rem 2px rgba(0, 0, 0, .4);/*Sombreamento na letras*/
     font-weight: 200; /*Espessura da fonte*/
     margin-bottom: 2rem; /*Margem para dar um espaçamento*/ 
@@ -79,7 +185,7 @@ header {
 /*formata o p dentro do banner*/
 .banner p{
     color: white;
-    font-family: "Josefin Slab" , serif;
+    font-family: var(--font-secundaria);
     font-size: 2rem;
     text-shadow: .2rem .2rem  rgba(0, 0, 0, .4);/*Sombreamento na letras*/
     margin-bottom: 2rem; /*Margem para dar um espaçamento*/ 
@@ -92,7 +198,7 @@ header {
 /*formata o botao dentro da classe banner*/
 .banner button{
 
-    font: "Muli", serif;
+    font: var(--font-acao);
     color: white;
     text-transform: uppercase; /*Letras todas maiusculas*/
     letter-spacing: .1rem; /*espaçamento das letras*/
@@ -132,3 +238,91 @@ header {
     
 }
 /*Animação do baner movendo para cima e para esquerda*/
+
+/* Formatando a sidebar para fica na direita e fixa*/
+.sidebar{
+
+        width: 20rem;
+        height: 100vh;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        right: -20rem;
+        transition: all 1s; /*delay na movimentação do objeto*/
+
+}
+/* Formatando a sidebar para fica na direita e fixa*/
+
+
+/* evento de trasiçao com java script em menu*/
+.show-menu .sidebar{
+    right: 0;
+
+}
+/* evento de trasiçao com java script em menu*/
+
+
+/* Formatando o menu para fica na direita e fixa*/
+.menu{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%); /*Posicionado no centralizado os elementos*/
+}
+/* Formatando o menu para fica na direita e fixa*/
+
+/* Formatando os itens menu para fica na direita e fixa*/
+.menu-item{
+    text-align: center; 
+    margin-bottom: .3rem;   /*espasamento das fontes*/
+}
+/* Formatando os itens menu para fica na direita e fixa*/
+
+/* Formatando a font nos textos dos links*/
+.menu-link{
+    font-family:  var(--font-acao);
+    font-size: 2rem;
+    color:  #555;
+    transition: color 1s; /* atraso de 1 segundo para mudar de cor*/
+}
+/* Formatando a font nos textos dos links*/
+
+/* Formatando a font de texto*/
+.menu-link:hover{
+    color: #0575E6;  /* fallback for old browsers */ /*backgroud gradiente*/ 
+    color: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to left, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* Formatando a font de texto*/
+
+/* Formatando os icones sociais*/
+.social-media{
+        position: absolute;
+        bottom: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    
+}
+/* Formatando os icones sociais*/
+
+/* Formatando os icones sociais aliamento*/
+.social-media i{
+    background: #0575E6;  /* fallback for old browsers */ /*backgroud gradiente*/ 
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: backgroud-color 1s;
+}
+/* Formatando os icones sociais aliamento*/
+
+.social-media i:hover{
+    background-color: blue;
+}
