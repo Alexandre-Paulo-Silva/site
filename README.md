@@ -1,13 +1,8 @@
 # site
-Site de Desenvolverdor
-## tarefas 
-
-O controle das tarefas desse projeto 
-
-## icones
+Meu site feito em Html, CSS e Javascript
 
 
-:package: nova funcionalidade
-:beatle: correção de bug
-:up: atualização
-:checkered_flag: realease
+## Telas: 
+
+![calculadora](https://github.com/Alexandre-Paulo-Silva/calculadora/blob/main/imagem/calculadora.png)
+
