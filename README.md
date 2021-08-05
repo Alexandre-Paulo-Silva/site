@@ -1,5 +1,5 @@
 # site
-Meu site feito em Html, CSS e Javascript
+Meu site feito em Html, CSS e Javascript com menu Hamburger
 
 
 ## Telas: 
