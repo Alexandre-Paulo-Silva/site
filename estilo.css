@@ -18,9 +18,11 @@
 
 /* Fatacao da pagina */
 
+
 html{
   scroll-behavior: smooth; /* faz a navegaçao fluir suavimente*/
 }
+
 
 /*Variaveis globais para fontes*/
 :root{
@@ -46,6 +48,7 @@ html{
         flex-direction: column;
         justify-content: space-evenly;
         cursor: pointer;
+        
        
 
 
@@ -68,6 +71,7 @@ html{
   background-color: #fff;
   box-shadow: 0.1rem 0.1rem 1px #000; /*Sombra do menu de linhas*/
   transition: transform 1s;
+  
   
  
 }
@@ -97,6 +101,7 @@ visibility: hidden;
 
 
 /*fazendo a linha 3 rotacionar para cima*/
+
 .hamburguer span{
 
     position: absolute;
@@ -148,7 +153,7 @@ header {
 
 /*formatação da imagem do cabeçalio altura largura*/
 
-@media screen and (min-width: 780px) {
+
 .img-wrapper {
   
     width: 100%;
@@ -158,24 +163,13 @@ header {
     animation: zoom, 25s; /*Linkando a animação na imagem com o numero de segundos*/
 
 }  
-}
+
 /*formatação da imagem do cabeçalio altura largura*/
 
 /*imagem de onda*/
 
 
-svg {
-  overflow: hidden;
-  padding-top: 25rem;
-  display: flex;
-  position: absolute;
-  display: flex;
-  width: 100%;
-  top: 0;
-  height: 30rem;
 
-
-}
 
 .bnt1{
   box-shadow: 0.1rem 0.1rem 6px #000;
@@ -618,6 +612,7 @@ svg {
     height: 30rem;
     display: flex;
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
+    border-radius: 3rem 3rem 3rem 3rem;
   }
   
   .contato-left {
@@ -625,12 +620,15 @@ svg {
     background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)),
       url(imagens/contato.jpg); /* Imagem backgroud dos contados*/
     background-size: cover; /* Cobre a imagem*/
+    border-radius: 3rem 0rem 0rem 3rem;
   }
   
   .contato-right {
     width: 65%;
     background-color: #eee;
     padding: 1rem 3rem 3rem 3rem;
+    border-radius: 0rem 3rem 3rem 0rem;
+
   }
   
   .sessao-contato h1 {
@@ -749,7 +747,7 @@ svg {
     background-color: linear-gradient(to left, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     position: fixed;
-    right: 3rem;
+    left: 3rem;
     bottom: 3rem;
     width: 3rem;
     height: 3rem;
@@ -759,10 +757,139 @@ svg {
     color: #fff;
     border-radius: .3rem;
     box-shadow:  0 0.1rem 0.6rem #00000009;
+    
+
   }
+
+
+  #link-topo { 
+    opacity : 0.5 }
+
  /*seta*/
 
  .sessao-header{
 
   padding-top: 1.9cm;
  }
+
+
+/*Responsividade*/
+
+
+
+/*Responsividade do formulario */
+
+/*Responsividade dos inputs */
+ @media screen and (max-width: 600px) {
+  .input-group, input[type=text], textarea[type=text] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/*Responsividade do textarea */
+@media screen and (max-width: 600px) {
+.input-group textarea {	
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;	
+  width: 100%;
+  }
+}
+
+/*Responsividade do papel de parede */
+@media screen and (max-width: 600px){
+.sessao-contato {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+} 
+}
+
+/*Responsividade do formulario */
+
+/*Responsividade do roda pe */
+
+
+/*Responsividade do bg  */
+@media screen and (max-width: 600px ) {
+  .footer-content {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  } 
+  }
+
+
+/*Responsividade do bg  */
+  @media screen and (max-width: 600px){
+    .footer{
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    } 
+    }
+  
+    
+/*Responsividade do img footer  */
+    @media screen and (max-width: 600px){
+      .footer{
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+      } 
+      }
+
+/*Responsividade do social  */
+      @media screen and (max-width: 600px){
+        .social-list{
+          width: 100%;
+          max-width: 400px;
+          height: auto;
+        } 
+        }
+
+/*Responsividade do roda pe */
+
+
+/*Responsividade cabeçalho*/
+
+
+@media screen and (max-width: 600px){
+
+  header{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  } 
+  }
+
+@media screen and (max-width: 600px){
+
+  .img-wrapper{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  } 
+  }
+
+  @media screen and (max-width: 600px){
+
+    .banner h1{
+      font-size: 1rem;
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    } 
+    }
+
+    @media screen and (max-width: 600px){
+
+      .banner button{
+        font-size: 1rem;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+      } 
+      }
+
