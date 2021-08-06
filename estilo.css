@@ -1,109 +1,122 @@
-
 /*Faz o importe das logos e das fontes do google*/
+
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
 /*Faz o importe das logos e das fontes do google*/
 
 
-
 /*tira as margens de toda pagina*/
 
-*{
+* {
     margin: 0;
     padding: 0;
-    list-style: none; /*para toda a pagina sem marcador da tag <li>*/
-    text-decoration: none; /*para toda a pagina sem o sublinhado da tag <li>*/
+    list-style: none;
+    /*para toda a pagina sem marcador da tag <li>*/
+    text-decoration: none;
+    /*para toda a pagina sem o sublinhado da tag <li>*/
 }
+
+
 /*tira as margens de toda pagina*/
+
 
 /* Fatacao da pagina */
 
-
-html{
-  scroll-behavior: smooth; /* faz a navegaçao fluir suavimente*/
+html {
+    scroll-behavior: smooth;
+    /* faz a navegaçao fluir suavimente*/
 }
 
 
 /*Variaveis globais para fontes*/
-:root{
 
-    --font-primaria: "Baloo Da 2" , serif; 
-    --font-secundaria: "Josefin Slab" , serif;
+:root {
+    --font-primaria: "Baloo Da 2", serif;
+    --font-secundaria: "Josefin Slab", serif;
     --font-acao: "Muli", serif;
 }
+
+
 /*Variaveis globais para fontes*/
 
 
 /*Formatando o estilo do menu Hanburger*/
-.hamburguer{
+
+.hamburguer {
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    /*deixa o elemento na posicação fixa*/
+    z-index: 160;
+    /*Alterar a prodedade do elemento no eixo Z*/
+    right: 2rem;
+    /*Move o elemento para direita*/
+    top: 2rem;
+    /*Move o elemento para baixo*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
 
 
-        width: 2rem;
-        height: 2rem;
-        position: fixed;  /*deixa o elemento na posicação fixa*/
-        z-index: 160;  /*Alterar a prodedade do elemento no eixo Z*/
-        right: 2rem; /*Move o elemento para direita*/
-        top: 2rem; /*Move o elemento para baixo*/
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        cursor: pointer;
-        
-       
-
-
-}   
 /*Formatando o estilo do menu Hanburger*/
 
-/*Animação Formatando o estilo do menu Hanburger*/
-.show-menu .hamburguer{
 
-        right: 16rem;
+/*Animação Formatando o estilo do menu Hanburger*/
+
+.show-menu .hamburguer {
+    right: 16rem;
 }
+
+
 /*Animação Formatando o estilo do menu Hanburger*/
 
 
 /*Formatando as linhas do menu Hanburger*/
-.linhas {
 
-  width: 100%;
-  height: 0.1rem;
-  background-color: #fff;
-  box-shadow: 0.1rem 0.1rem 1px #000; /*Sombra do menu de linhas*/
-  transition: transform 1s;
-  
-  
- 
+.linhas {
+    width: 100%;
+    height: 0.1rem;
+    background-color: #fff;
+    box-shadow: 0.1rem 0.1rem 1px #000;
+    /*Sombra do menu de linhas*/
+    transition: transform 1s;
 }
+
+
 /*Formatando as linhas do menu Hanburguer*/
 
+
 /*fazendo a linha 1 rotacionar para baixo*/
-.show-menu #line1{
+
+.show-menu #line1 {
     transform: rotate(47deg) translate(.3rem, .47rem);
-   
-   
 }
 
-/*fazendo a linha 2 do menu hamburguer sumir*/
-.show-menu #line2{
-opacity: 0;
-visibility: hidden;
 
-}
 /*fazendo a linha 2 do menu hamburguer sumir*/
+
+.show-menu #line2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/*fazendo a linha 2 do menu hamburguer sumir*/
+
 
 /*fazendo a linha 3 rotacionar para cima*/
-.show-menu #line3{
+
+.show-menu #line3 {
     transform: rotate(-47deg) translate(.1rem, -.47rem);
-    
 }
-
 
 
 /*fazendo a linha 3 rotacionar para cima*/
 
-.hamburguer span{
-
+.hamburguer span {
     position: absolute;
     left: 3rem;
     height: 2rem;
@@ -111,18 +124,22 @@ visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0575E6;  /* fallback for old browsers */
-    background-color: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
-    background-color: linear-gradient(to left, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #0575E6;
+    /* fallback for old browsers */
+    background-color: -webkit-linear-gradient(to right, #021B79, #0575E6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background-color: linear-gradient(to left, #021B79, #0575E6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #ffffff;
     font-family: var(--font-acao);
     border-radius: 5px;
     opacity: 0;
+}
 
-} 
 
 /*fazndo a setinha so span*/
-.hamburguer span::before{
+
+.hamburguer span::before {
     content: "";
     position: absolute;
     border-right: .5rem solid #0575E6;
@@ -130,237 +147,323 @@ visibility: hidden;
     border-left: .5rem solid transparent;
     border-bottom: .5rem solid transparent;
     left: -1.0rem;
-    
-  
 }
+
+
 /*fazndo a setinha so span*/
 
-.show-menu .hamburguer:hover span{
-
+.show-menu .hamburguer:hover span {
     opacity: 1;
 }
+
 
 /*cabeçalho da pagina*/
 
 header {
-    width: 100%; 
+    width: 100%;
     height: 100vh;
-    overflow: hidden; /*se adpta tipo de tela sem barra de rolagem lateral*/
-    position: relative; /*modo atrás do elementos*/
+    overflow: hidden;
+    /*se adpta tipo de tela sem barra de rolagem lateral*/
+    position: relative;
+    /*modo atrás do elementos*/
 }
+
 
 /*cabeçalho da pagina*/
 
+
 /*formatação da imagem do cabeçalio altura largura*/
 
-
 .img-wrapper {
-  
     width: 100%;
     height: 100%;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.8);
-    animation: zoom, 25s; /*Linkando a animação na imagem com o numero de segundos*/
+    animation: zoom, 25s;
+    /*Linkando a animação na imagem com o numero de segundos*/
+}
 
-}  
 
 /*formatação da imagem do cabeçalio altura largura*/
 
+
 /*imagem de onda*/
 
-
-
-
-.bnt1{
-  box-shadow: 0.1rem 0.1rem 6px #000;
-  cursor: pointer;
+.bnt1 {
+    box-shadow: 0.1rem 0.1rem 6px #000;
+    cursor: pointer;
 }
-
-
 
 
 /*Animação da Imagem efeito de zoom*/
+
 @keyframes zoom {
-    0%{ 
-        transform: scale(1.3); /* frame Inicial 0 com escala*/
+    0% {
+        transform: scale(1.3);
+        /* frame Inicial 0 com escala*/
     }
-    100%{
-        transform: scale(1); /* frame Final 100 com escala*/
+    100% {
+        transform: scale(1);
+        /* frame Final 100 com escala*/
     }
 }
+
+
 /*Animação da Imagem efeito de zoom*/
 
 
 /*formatação da imagem do cabeçalio */
-.img-wrapper img{
+
+.img-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /*vaz a imagem se adptar mantento ela centralizada*/
-    opacity: 0.5; /*desbota a imagem*/
+    object-fit: cover;
+    /*vaz a imagem se adptar mantento ela centralizada*/
+    opacity: 0.5;
+    /*desbota a imagem*/
     animation: zoom 25s;
 }
+
+
 /*formatação da imagem do cabeçalio */
 
-/*banner do cabeçalio */
-.banner {
-    position: absolute; /*modo por cima do elementos*/
-    top: 30%; /*move a posicao do elemento para cima*/
-    left: 15%; /*move a posicao do elemento para esqueda*/
-}
+
 /*banner do cabeçalio */
 
+.banner {
+    position: absolute;
+    /*modo por cima do elementos*/
+    top: 30%;
+    /*move a posicao do elemento para cima*/
+    left: 15%;
+    /*move a posicao do elemento para esqueda*/
+}
+
+
+/*banner do cabeçalio */
+
+
 /*formata o h1 dentro do banner*/
-.banner h1{
+
+.banner h1 {
     color: white;
     font-size: 3rem;
-    font-family: var(--font-primaria); /*formata a font baixada do google  com variavel de cor global*/
-    text-shadow: .3rem .4rem 2px rgba(0, 0, 0, .4);/*Sombreamento na letras*/
-    font-weight: 200; /*Espessura da fonte*/
-    margin-bottom: 2rem; /*Margem para dar um espaçamento*/ 
-    opacity: 0; /*Para as letras nao aparecer*/
-    animation: moveBanner 1s 0.5 forwards; /*Linkando a animação no titulo com o numero de segundos*/
-
+    font-family: var(--font-primaria);
+    /*formata a font baixada do google  com variavel de cor global*/
+    text-shadow: .3rem .4rem 2px rgba(0, 0, 0, .4);
+    /*Sombreamento na letras*/
+    font-weight: 200;
+    /*Espessura da fonte*/
+    margin-bottom: 2rem;
+    /*Margem para dar um espaçamento*/
+    opacity: 0;
+    /*Para as letras nao aparecer*/
+    animation: moveBanner 1s 0.5 forwards;
+    /*Linkando a animação no titulo com o numero de segundos*/
 }
+
+
 /*formata o h1 dentro do banner*/
 
+
 /*formata o p dentro do banner*/
-.banner p{
+
+.banner p {
     color: white;
     font-family: var(--font-secundaria);
     font-size: 2rem;
-    text-shadow: .2rem .2rem  rgba(0, 0, 0, .4);/*Sombreamento na letras*/
-    margin-bottom: 2rem; /*Margem para dar um espaçamento*/ 
-    opacity: 0; /*Para as letras nao aparecer*/
-    animation: moveBanner 1s 0.7 forwards; /*Linkando a animação no titulo com o numero de segundos*/
-
+    text-shadow: .2rem .2rem rgba(0, 0, 0, .4);
+    /*Sombreamento na letras*/
+    margin-bottom: 2rem;
+    /*Margem para dar um espaçamento*/
+    opacity: 0;
+    /*Para as letras nao aparecer*/
+    animation: moveBanner 1s 0.7 forwards;
+    /*Linkando a animação no titulo com o numero de segundos*/
 }
+
+
 /*formata o p dentro do banner*/
 
-/*formata o botao dentro da classe banner*/
-.banner button{
 
+/*formata o botao dentro da classe banner*/
+
+.banner button {
     font: var(--font-acao);
     color: white;
-    text-transform: uppercase; /*Letras todas maiusculas*/
-    letter-spacing: .1rem; /*espaçamento das letras*/
-    background: #0575E6;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-transform: uppercase;
+    /*Letras todas maiusculas*/
+    letter-spacing: .1rem;
+    /*espaçamento das letras*/
+    background: #0575E6;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #021B79, #0575E6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     box-shadow: 0.1rem 0.1rem 6px #000;
-    padding-top: 1rem;  /* largura do botao para cima */
-    padding-bottom: 1rem;  /* largura do botao para baixo */
-    padding-left: 2rem;  /* largura do botao para esquerda */
-    padding-right: 2rem ;    /* largura do botao para direita */
-    border: none; /*Sem Borda*/
-    border-radius: 5px; /*Arrendonda as bordas do botao*/
-    cursor: pointer; /*Muda o curso do mause ao passar por cima do botao clicaveu*/
-    opacity: 0; /*Para as letras nao aparecer*/
-    animation: moveBanner 1s 0.9 forwards; /*Linkando a animação no titulo com o numero de segundos*/
-    
-
+    padding-top: 1rem;
+    /* largura do botao para cima */
+    padding-bottom: 1rem;
+    /* largura do botao para baixo */
+    padding-left: 2rem;
+    /* largura do botao para esquerda */
+    padding-right: 2rem;
+    /* largura do botao para direita */
+    border: none;
+    /*Sem Borda*/
+    border-radius: 5px;
+    /*Arrendonda as bordas do botao*/
+    cursor: pointer;
+    /*Muda o curso do mause ao passar por cima do botao clicaveu*/
+    opacity: 0;
+    /*Para as letras nao aparecer*/
+    animation: moveBanner 1s 0.9 forwards;
+    /*Linkando a animação no titulo com o numero de segundos*/
 }
+
+
 /*formata o botao dentro da classe banner*/
 
-/*acao de animação do botao*/
-.banner button:hover{
-    opacity: 0.8; /* o botao fica opaco ao passar sobre ele  */
-}
+
 /*acao de animação do botao*/
 
+.banner button:hover {
+    opacity: 0.8;
+    /* o botao fica opaco ao passar sobre ele  */
+}
+
+
+/*acao de animação do botao*/
+
+
 /*Animação do baner movendo para cima e para esquerda*/
+
 @keyframes moveBanner {
-    0%{
+    0% {
         transform: translateY(10rem) rotateY(-30deg);
     }
-
-    100%{
-        transform: translateY(0) rotateY(0); 
-        opacity: 1; /*Fazendo aparecer as letras*/
+    100% {
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
+        /*Fazendo aparecer as letras*/
     }
-    
 }
+
+
 /*Animação do baner movendo para cima e para esquerda*/
 
-/* Formatando a sidebar para fica na direita e fixa*/
-.sidebar{
-        border-radius: 3rem 0rem 0rem 3rem;
-        width: 20rem;
-        height: 100vh;
-        background-color: #fff;
-        position: fixed;
-        top: 0;
-        right: -20rem;
-        transition: all 1s; /*delay na movimentação do objeto*/
-        z-index: 150;
-        box-shadow: 0.1rem 0.1rem 6px #000;
 
+/* Formatando a sidebar para fica na direita e fixa*/
+
+.sidebar {
+    border-radius: 3rem 0rem 0rem 3rem;
+    width: 20rem;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    transition: all 1s;
+    /*delay na movimentação do objeto*/
+    z-index: 150;
+    box-shadow: 0.1rem 0.1rem 6px #000;
 }
+
+
 /* Formatando a sidebar para fica na direita e fixa*/
 
 
 /* evento de trasiçao com java script em menu*/
-.show-menu .sidebar{
-    right: 0;
-  
 
+.show-menu .sidebar {
+    right: 0;
 }
+
+
 /* evento de trasiçao com java script em menu*/
 
 
 /* Formatando o menu para fica na direita e fixa*/
-.menu{
 
+.menu {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%,-50%); /*Posicionado no centralizado os elementos*/
-    
+    transform: translate(-50%, -50%);
+    /*Posicionado no centralizado os elementos*/
 }
+
+
 /* Formatando o menu para fica na direita e fixa*/
 
-/* Formatando os itens menu para fica na direita e fixa*/
-.menu-item{
-    text-align: center; 
-    margin-bottom: .3rem;   /*espasamento das fontes*/
-    
-}
+
 /* Formatando os itens menu para fica na direita e fixa*/
 
+.menu-item {
+    text-align: center;
+    margin-bottom: .3rem;
+    /*espasamento das fontes*/
+}
+
+
+/* Formatando os itens menu para fica na direita e fixa*/
+
+
 /* Formatando a font nos textos dos links*/
-.menu-link{
-    font-family:  var(--font-acao);
+
+.menu-link {
+    font-family: var(--font-acao);
     font-size: 2rem;
-    color:  #555;
-    transition: color 1s; /* atraso de 1 segundo para mudar de cor*/
-    
+    color: #555;
+    transition: color 1s;
+    /* atraso de 1 segundo para mudar de cor*/
 }
+
+
 /* Formatando a font nos textos dos links*/
 
-/* Formatando a font de texto*/
-.menu-link:hover{
-    color: #0575E6;  /* fallback for old browsers */ /*backgroud gradiente*/ 
-    color: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
-    color: linear-gradient(to left, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-   
-  }
+
 /* Formatando a font de texto*/
 
-/* Formatando os icones sociais*/
-.social-media{
-        position: absolute;
-        bottom: 2rem;
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-    
+.menu-link:hover {
+    color: #0575E6;
+    /* fallback for old browsers */
+    /*backgroud gradiente*/
+    color: -webkit-linear-gradient(to right, #021B79, #0575E6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to left, #021B79, #0575E6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+
+/* Formatando a font de texto*/
+
+
 /* Formatando os icones sociais*/
+
+.social-media {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* Formatando os icones sociais*/
+
 
 /* Formatando os icones sociais aliamento*/
-.social-media i{
-    background: #0575E6;  /* fallback for old browsers */ /*backgroud gradiente*/ 
-    background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+.social-media i {
+    background: #0575E6;
+    /* fallback for old browsers */
+    /*backgroud gradiente*/
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #021B79, #0575E6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
     height: 2.5rem;
     width: 2.5rem;
@@ -372,227 +475,250 @@ header {
     transition: backgroud-color 1s;
     box-shadow: 0.1rem 0.1rem 6px #000;
 }
+
+
 /* Formatando os icones sociais aliamento*/
 
-/* Formatar a midia dos icones*/
-.social-media i:hover{
-    background-color: blue;
-}
+
 /* Formatar a midia dos icones*/
 
+.social-media i:hover {
+    background-color: blue;
+}
+
+
+/* Formatar a midia dos icones*/
+
+
 /*Formatando as colunas e linhas*/
+
 .conhecimentos {
     height: 100%;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(6, 6rem);
     row-gap: 0.5rem;
-  }
-/*Formatando as colunas e linhas*/
+}
+
 
 /*Formatando as colunas e linhas*/
+
+
+/*Formatando as colunas e linhas*/
+
 .conhecimento:nth-child(1) {
     grid-column: 4 / 7;
     grid-row: 1 / 3;
-  }
-  
-  .conhecimento:nth-child(2) {
-    grid-column: 3 / 6; /*colunas*/
+}
+
+.conhecimento:nth-child(2) {
+    grid-column: 3 / 6;
+    /*colunas*/
     grid-row: 3 / 5;
-  }
-  
-  .conhecimento:nth-child(3) {
+}
+
+.conhecimento:nth-child(3) {
     grid-column: 4 / 7;
-    grid-row: 5 / -1;  /*linhas*/
-  }
-  
-  .conhecimento:nth-child(4) {
+    grid-row: 5 / -1;
+    /*linhas*/
+}
+
+.conhecimento:nth-child(4) {
     grid-column: 11 / 15;
     grid-row: 1 / 3;
-  }
-  
-  .conhecimento:nth-child(5) {
+}
+
+.conhecimento:nth-child(5) {
     grid-column: 12 / 16;
     grid-row: 3 / 5;
-  }
-  
-  .conhecimento:nth-child(6) {
+}
+
+.conhecimento:nth-child(6) {
     grid-column: 11 / 15;
     grid-row: 5 / -1;
-  }
-  /*Formatando as colunas e linhas*/
+}
 
-  .sessao-header {
+
+/*Formatando as colunas e linhas*/
+
+.sessao-header {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
 
 
 /*Formatando o cabeçalho do conhecimento*/
-  .sessao-header h1 {
+
+.sessao-header h1 {
     font-family: var(--font-primary);
     font-size: 3rem;
     color: #4b4b4b;
     border-bottom: solid 3px blue;
     margin-bottom: 1.5rem;
-    
-  }
+}
 
 
-  /*Formatando o icone php*/
-  .conhecimento .fa-php{
-   width: 50px;
-   height: 40px;
-   font-size: 2.5rem;
-   color: white;
-   background-color: #4b4b4b;
-   border-radius: 9px;
+/*Formatando o icone php*/
 
-  }
+.conhecimento .fa-php {
+    width: 50px;
+    height: 40px;
+    font-size: 2.5rem;
+    color: white;
+    background-color: #4b4b4b;
+    border-radius: 9px;
+}
 
 
 /*Formatando titulos dos icones*/
-  .conhecimento-header {
+
+.conhecimento-header {
     display: flex;
     align-items: center;
     color: #4b4b4b;
-  }
+}
 
-.conhecimento-header i{
-
+.conhecimento-header i {
     font-size: 2.5rem;
 }
 
-/*Formatando titulos dos icones*/
-.conhecimento-header h3{
 
+/*Formatando titulos dos icones*/
+
+.conhecimento-header h3 {
     font-family: var(--font-secundaria);
     font-size: 1.5rem;
-    padding-left: 1rem;/* Espaçamento*/
-    
-}   
+    padding-left: 1rem;
+    /* Espaçamento*/
+}
+
 
 /*Formatando o texto dos icones do conhecimento*/
-.conhecimento-text{
 
+.conhecimento-text {
     font-family: var(--font-secundaria);
     margin-top: 1rem;
 }
 
-/*Formatando a coluna da imagem*/
-.conhecimentos-img-wrapper{
 
+/*Formatando a coluna da imagem*/
+
+.conhecimentos-img-wrapper {
     grid-column: 7 / 11;
     grid-row: 3 / 6;
     width: 100%;
-
 }
+
 
 /*Formatando a coluna da imagem*/
-.conhecimentos-img-wrapper img{
+
+.conhecimentos-img-wrapper img {
     object-fit: cover;
     width: 100%;
-
-
 }
+
 
 /*Formatando a sesao projetos*/
 
 .projetos {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
 }
 
 .card {
-  width: 18rem;
-  height: 25rem;
-  position: relative; /*Posicionamento do eleemento*/
+    width: 18rem;
+    height: 25rem;
+    position: relative;
+    /*Posicionamento do eleemento*/
 }
 
 .card-img-wrapper {
-
-  width: 100%;
-  height: 100%;
-  background-color: #262626;
-  border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    border-radius: 0.5rem;
 }
 
 .card-img-wrapper img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 0.5rem;
-  opacity: 0.8;
-  transition: opacity 0.3s;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    opacity: 0.8;
+    transition: opacity 0.3s;
 }
 
 .card:hover .card-img-wrapper img {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 
 .card-info {
-  position: absolute;
-  bottom: 0;
-  opacity: 0;
-  visibility: hidden;
-  padding: 2rem;
-  text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, 0.6);
-  transition: all 0.3s;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    padding: 2rem;
+    text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, 0.6);
+    transition: all 0.3s;
 }
 
 .card-info h2 {
-  font-family: var(--font-primary);
-  font-size: 2rem;
-  font-weight: 500;
-  color: #eee;
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 500;
+    color: #eee;
 }
 
 .card-info h3 {
-  font-family: var(--font-action);
-  font-weight: bolder;
-  color: #ff4081;
-  margin-bottom: 1.5rem;
+    font-family: var(--font-action);
+    font-weight: bolder;
+    color: #ff4081;
+    margin-bottom: 1.5rem;
 }
 
 .card-info p {
-  font-family: var(--font-secundary);
-  color: #eee;
-  font-weight: 400;
-  width: 80%;
-  margin-bottom: 2rem;
+    font-family: var(--font-secundary);
+    color: #eee;
+    font-weight: 400;
+    width: 80%;
+    margin-bottom: 2rem;
 }
 
 .btn {
-  background: #0575E6;  /* fallback for old browsers */ /*backgroud gradiente*/ 
-  background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  font-family: var(--font-action);
-  color: #eee;
-  border-radius: 0.5rem;
-  border: none;
-  box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.4);
+    background: #0575E6;
+    /* fallback for old browsers */
+    /*backgroud gradiente*/
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #021B79, #0575E6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: var(--font-action);
+    color: #eee;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.4);
 }
 
 .card-info button {
-  width: 8rem;
-  height: 2.5rem;
+    width: 8rem;
+    height: 2.5rem;
 }
 
 .card:hover .card-info {
-  bottom: 2rem;
-  opacity: 1;
-  visibility: visible;
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
 }
 
-  /*Formatando a sesao projetos*/
+
+/*Formatando a sesao projetos*/
 
 
+/*Formatando o formuladrio*/
 
-  /*Formatando o formuladrio*/
-
-  .sessao-contato {
+.sessao-contato {
     width: 100%;
     height: 100vh;
     background-image: url(imagens/contato10.jpg);
@@ -603,94 +729,100 @@ header {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+}
 
- 
-  }
-  
-  .contato-wrapper {
+.contato-wrapper {
     width: 60%;
     height: 30rem;
     display: flex;
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
     border-radius: 3rem 3rem 3rem 3rem;
-  }
-  
-  .contato-left {
+}
+
+.contato-left {
     width: 35%;
-    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)),
-      url(imagens/contato.jpg); /* Imagem backgroud dos contados*/
-    background-size: cover; /* Cobre a imagem*/
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)), url(imagens/contato.jpg);
+    /* Imagem backgroud dos contados*/
+    background-size: cover;
+    /* Cobre a imagem*/
     border-radius: 3rem 0rem 0rem 3rem;
-  }
-  
-  .contato-right {
+}
+
+.contato-right {
     width: 65%;
     background-color: #eee;
     padding: 1rem 3rem 3rem 3rem;
     border-radius: 0rem 3rem 3rem 0rem;
+}
 
-  }
-  
-  .sessao-contato h1 {
+.sessao-contato h1 {
     width: 100%;
     text-align: center;
     font-family: var(--font-primary);
     color: #272727;
     font-size: 3rem;
     font-weight: lighter;
-  }
-  
-  .sessao-contato form {
+}
+
+.sessao-contato form {
     width: 100%;
     display: flex;
-    flex-direction: column; /*em formato de coluna */
+    flex-direction: column;
+    /*em formato de coluna */
     align-items: center;
-  }
-  
-  .input-group {
+}
+
+.input-group {
     position: relative;
-  }
-  
-  .field {
+}
+
+.field {
     background: transparent;
     border: none;
     width: 20rem;
     font-size: 1.5rem;
     font-family: var(--font-secundary);
-    border-bottom: 2px dashed #636363; /*borda pontinhada*/
+    border-bottom: 2px dashed #636363;
+    /*borda pontinhada*/
     height: 3rem;
     outline: none;
     margin: 1rem 0;
-  }
-  
+}
 
-  .input-group textarea { /*Formatado a area de texto da mensagem*/
+.input-group textarea {
+    /*Formatado a area de texto da mensagem*/
     padding-top: 1rem;
-    max-width: 25rem; /*Limite*/
-    max-height: 3rem; /*Limite*/
-  }
-  
-  .field-label {
+    max-width: 25rem;
+    /*Limite*/
+    max-height: 3rem;
+    /*Limite*/
+}
+
+.field-label {
     position: absolute;
     left: 0;
     top: 2rem;
     font-size: 1rem;
     font-family: var(--font-secundary);
-    text-transform: uppercase; /* Todas letras maiusculas*/
-    transition: all 0.3s; 
-  }
-  
-  .field:focus ~ label { /*Somente o label a seguir dele */
+    text-transform: uppercase;
+    /* Todas letras maiusculas*/
+    transition: all 0.3s;
+}
+
+.field:focus~label {
+    /*Somente o label a seguir dele */
     top: 0;
     font-size: 0.7rem;
-  }
-  
-  .field:focus {
+}
+
+.field:focus {
     border-bottom: 1px solid;
-  }
-  
-  /*Formatando o botao do contatto*/
-  .btn-submit {
+}
+
+
+/*Formatando o botao do contatto*/
+
+.btn-submit {
     font-size: 1.2rem;
     text-transform: uppercase;
     width: 80%;
@@ -700,52 +832,53 @@ header {
     cursor: pointer;
     text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
     box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
-  }
-  
-  .preenchido{
-      pointer-events: none;
-  }
-  
- 
-  
-  footer{
+}
+
+.preenchido {
+    pointer-events: none;
+}
+
+footer {
     width: 100%;
     height: 7rem;
     background-color: #17181b;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .footer-content{
+}
+
+.footer-content {
     width: 60%;
     display: flex;
     justify-content: space-between;
-  }
-  
-  .footer-content p{
+}
+
+.footer-content p {
     font-family: var(--font-secundary);
     color: #a7a7a7;
     font-size: 1.2rem;
-  }
-  
-  .social-list a{
+}
+
+.social-list a {
     margin: 0 2rem;
     color: #a7a7a7;
     font-size: 1.3rem;
-  }
-  
-  .social-list ul {
+}
+
+.social-list ul {
     display: flex;
-  }
-  
-  /*seta*/
-  #link-topo{
+}
 
-    background-color: #0575E6;  /* fallback for old browsers */
-    background-color: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
-    background-color: linear-gradient(to left, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+/*seta*/
+
+#link-topo {
+    background-color: #0575E6;
+    /* fallback for old browsers */
+    background-color: -webkit-linear-gradient(to right, #021B79, #0575E6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background-color: linear-gradient(to left, #021B79, #0575E6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     position: fixed;
     left: 3rem;
     bottom: 3rem;
@@ -756,140 +889,150 @@ header {
     align-items: center;
     color: #fff;
     border-radius: .3rem;
-    box-shadow:  0 0.1rem 0.6rem #00000009;
-    
+    box-shadow: 0 0.1rem 0.6rem #00000009;
+}
 
-  }
+#link-topo {
+    opacity: 0.5
+}
 
 
-  #link-topo { 
-    opacity : 0.5 }
+/*seta*/
 
- /*seta*/
-
- .sessao-header{
-
-  padding-top: 1.9cm;
- }
+.sessao-header {
+    padding-top: 1.9cm;
+}
 
 
 /*Responsividade*/
 
 
-
 /*Responsividade do formulario */
+
 
 /*Responsividade dos inputs */
- @media screen and (max-width: 600px) {
-  .input-group, input[type=text], textarea[type=text] {
-    width: 100%;
-    margin-top: 0;
-  }
+
+@media screen and (max-width: 600px) {
+    .input-group,
+    input[type=text],
+    textarea[type=text] {
+        width: 100%;
+        margin-top: 0;
+    }
 }
+
 
 /*Responsividade do textarea */
+
 @media screen and (max-width: 600px) {
-.input-group textarea {	
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;	
-  width: 100%;
-  }
+    .input-group textarea {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+    }
 }
+
 
 /*Responsividade do papel de parede */
-@media screen and (max-width: 600px){
-.sessao-contato {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-} 
+
+@media screen and (max-width: 600px) {
+    .sessao-contato {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
 }
 
+
 /*Responsividade do formulario */
+
 
 /*Responsividade do roda pe */
 
 
 /*Responsividade do bg  */
-@media screen and (max-width: 600px ) {
-  .footer-content {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-  } 
-  }
 
-
-/*Responsividade do bg  */
-  @media screen and (max-width: 600px){
-    .footer{
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-    } 
-    }
-  
-    
-/*Responsividade do img footer  */
-    @media screen and (max-width: 600px){
-      .footer{
+@media screen and (max-width: 600px) {
+    .footer-content {
         width: 100%;
         max-width: 400px;
         height: auto;
-      } 
-      }
+    }
+}
+
+
+/*Responsividade do bg  */
+
+@media screen and (max-width: 600px) {
+    .footer {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+}
+
+
+/*Responsividade do img footer  */
+
+@media screen and (max-width: 600px) {
+    .footer {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+}
+
 
 /*Responsividade do social  */
-      @media screen and (max-width: 600px){
-        .social-list{
-          width: 100%;
-          max-width: 400px;
-          height: auto;
-        } 
-        }
+
+@media screen and (max-width: 600px) {
+    .social-list {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+}
+
 
 /*Responsividade do roda pe */
 
 
 /*Responsividade cabeçalho*/
 
-
-@media screen and (max-width: 600px){
-
-  header{
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-  } 
-  }
-
-@media screen and (max-width: 600px){
-
-  .img-wrapper{
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-  } 
-  }
-
-  @media screen and (max-width: 600px){
-
-    .banner h1{
-      font-size: 1rem;
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-    } 
+@media screen and (max-width: 600px) {
+    header {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
     }
+}
 
-    @media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
+    .img-wrapper {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+}
 
-      .banner button{
+@media screen and (max-width: 600px) {
+    .banner h1 {
         font-size: 1rem;
         width: 100%;
         max-width: 400px;
         height: auto;
-      } 
-      }
+    }
+}
 
+@media screen and (max-width: 600px) {
+    .banner button {
+        font-size: 1rem;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+}
+
+
+/*fef*/
