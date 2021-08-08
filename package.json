@@ -1,0 +1,28 @@
+{
+    "name": "site",
+    "version": "1.0.0",
+    "description": "Meu site feito em Html, CSS e Javascript com menu Hamburger",
+    "main": "script.js",
+    "scripts": {
+        "dev": "nodemon server.js",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Alexandre-Paulo-Silva/site.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Alexandre-Paulo-Silva/site/issues"
+    },
+    "homepage": "https://github.com/Alexandre-Paulo-Silva/site#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "nodemailer": "^6.6.3"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.12"
+    }
+}
