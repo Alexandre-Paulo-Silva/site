@@ -809,14 +809,14 @@ header {
     top: 2rem;
     font-size: 1rem;
     font-family: var(--font-secundary);
-    text-transform: uppercase;
+    text-transform: capitalize;
     /* Todas letras maiusculas*/
     transition: all 0.3s;
 }
 
 .field:focus~label {
     /*Somente o label a seguir dele */
-    top: 0;
+    top: 10;
     font-size: 0.7rem;
 }
 
