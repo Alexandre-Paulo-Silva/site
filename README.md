@@ -1,6 +1,6 @@
 # site
-Meu site feito em Html, CSS e Javascript com menu Hamburger
 
+Meu site feito em Html, CSS , Javascript, nodejs, com Framework Express, Servidor nodemon e nodemail
 
 ## Telas: 
 
